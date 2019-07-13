@@ -1,5 +1,5 @@
 <?php 
-	require_once 'database.php';
+	require_once 'controllers/database.php';
 	
 	if(!$user->is_loggedin()){
 	 $user->redirect('index.php');

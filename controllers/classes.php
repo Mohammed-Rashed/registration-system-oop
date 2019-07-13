@@ -68,7 +68,11 @@ class USER
    {
        header("Location: $url");
    }
- 
+    public function redirectBack()
+   {
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+   }
+
    public function logout()
    {
         session_destroy();
