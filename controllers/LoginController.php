@@ -2,7 +2,7 @@
 	require_once 'database.php';
 	if($user->is_loggedin()!="")
 	{
-	 $user->redirect('home.php');
+	 $user->redirect('home');
 	}
 	if(isset($_POST['btn-login']))
 	{
@@ -12,7 +12,7 @@
 		  
 		 if($user->login($uname,$umail,$upass))
 		 {
-		  $user->redirect('home.php');
+		  $user->redirect('home');
 		 }
 		 else
 		 {

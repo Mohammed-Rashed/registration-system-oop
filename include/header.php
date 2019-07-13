@@ -16,10 +16,10 @@
            echo '<a href="logout.php?logout=true" class="btn btn-danger">logout</a>';
 
         }elseif(!$user->is_loggedin() && $_SERVER['PHP_SELF']=='/oop-reg/index.php'){
-          echo '<a href="register.php" class="btn btn-danger">Register</a>';
+          echo '<a href="register" class="btn btn-danger">Register</a>';
 
         }elseif(!$user->is_loggedin() &&  $_SERVER['PHP_SELF']=='/oop-reg/register.php'){
-            echo '<a href="index.php" class="btn btn-danger">Login</a>';
+            echo '<a href="index" class="btn btn-danger">Login</a>';
 
         }
       ?>

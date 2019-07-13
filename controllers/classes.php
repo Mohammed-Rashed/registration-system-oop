@@ -8,13 +8,13 @@ class USER
       $this->db = $DB_con;
     }
  
-    public function register($fname,$lname,$uname,$umail,$upass)
+    public function register($uname,$umail,$upass)
     {
        try
        {
            $new_password = password_hash($upass, PASSWORD_DEFAULT);
    
-           $stmt = $this->db->prepare("INSERT INTO users(name,email,pass) 
+           $stmt = $this->db->prepare("INSERT INTO users(name,email,password) 
                                                        VALUES(:uname, :umail, :upass)");
               
            $stmt->bindparam(":uname", $uname);

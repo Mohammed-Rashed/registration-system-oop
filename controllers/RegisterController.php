@@ -5,7 +5,7 @@ require_once 'database.php';
 
 if($user->is_loggedin()!="")
 {
-    $user->redirect('home.php');
+    $user->redirect('home');
 }
 if(isset($_POST['btn-signup'])){
 
@@ -41,9 +41,9 @@ if(isset($_POST['btn-signup'])){
          }
          else
          {
-            if($user->register($fname,$lname,$uname,$umail,$upass)) 
+            if($user->register($uname,$umail,$upass)) 
             {
-                $user->redirect('register.php?joined');
+                $user->redirect('register?joined');
             }
          }
      }
